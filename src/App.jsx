@@ -260,6 +260,11 @@ function App() {
             </ul>
           </div>
         </section>
+        <footer className="footer">
+  <p>
+    © 2026 Febie Ann Mombay | UX Designer | Graphic Designer
+  </p>
+</footer>
       </div>
     </>
   );
