@@ -7,6 +7,40 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (
+      formData.name.trim() === "" ||
+      formData.email.trim() === "" ||
+      formData.message.trim() === ""
+    ) {
+      alert("⚠️ Please fill in all fields!");
+      return;
+    }
+
+    alert("✅ Message Sent!");
+
+    setFormData({
+      name: "",
+      email: "",
+      message: "",
+    });
+  };
+
 
   // Simulate loading for the circular loader
   useEffect(() => {
@@ -187,19 +221,43 @@ function App() {
 
         {/* FOOTER */}
         <footer id="contact" className="footer">
-          <div className="container">
-            <div className="footer-cta">
-              <h2>
-                Let's <span className="text-ochre">Connect</span> there
-              </h2>
-              <div className="subscribe">
-                <form>
-                  <input type="email" placeholder="Email address" required />
-                  <button type="submit">➤</button>
-                </form>
-              </div>
-            </div>
-          </div>
+           <div className="contact-section">
+      <h1 className="contact-title">
+        Contact <span>Me</span>
+      </h1>
+
+      <form className="contact-card" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="name"
+          placeholder="Full Name"
+          className="contact-input"
+          value={formData.name}
+          onChange={handleChange}
+        />
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          className="contact-input"
+          value={formData.email}
+          onChange={handleChange}
+        />
+
+        <textarea
+          name="message"
+          placeholder="Message"
+          className="contact-textarea"
+          value={formData.message}
+          onChange={handleChange}
+        ></textarea>
+
+        <button type="submit" className="contact-btn">
+          Send Message
+        </button>
+      </form>
+    </div>
         </footer>
 
         {/* NEXT STEPS / SOCIAL */}

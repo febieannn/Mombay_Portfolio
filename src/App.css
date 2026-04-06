@@ -789,6 +789,137 @@ const path
   letter-spacing: 1px;
 }
 
+
+.contact-section{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+
+.contact-title{
+  font-size:48px;
+  margin-bottom:40px;
+}
+
+.contact-title span{
+  color:#E5A534;
+}
+
+.contact-card{
+  width:100%;
+  max-width:500px;
+  padding:35px;
+  border-radius:20px;
+  background:rgba(207, 204, 204, 0.02);
+  border:1px solid rgba(19, 19, 19, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.contact-input,
+.contact-textarea{
+  width:100%;
+  padding:15px;
+  margin-bottom:18px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,0.1);
+  background:#e6e6e8;
+  color:rgb(0, 0, 0);
+  font-size:15px;
+}
+
+.contact-textarea{
+  height:120px;
+  resize:none;
+}
+
+.contact-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.contact-title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.contact-title span {
+  color: #E5A534;
+}
+
+.contact-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 35px;
+  border-radius: 20px;
+  background: rgba(207, 204, 204, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.contact-input,
+.contact-textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #ccc;
+  background: #e6e6e8;
+  color: black;
+  font-size: 15px;
+}
+
+.contact-textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  background: #E5A534;
+  transition: 0.3s;
+}
+
+.contact-btn:hover {
+  transform: scale(1.05);
+}
+
+/* 🔥 MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+  .contact-title {
+    font-size: 32px;
+  }
+
+  .contact-card {
+    padding: 20px;
+  }
+
+  .contact-input,
+  .contact-textarea {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .contact-btn {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+
 @media screen and (max-width: 1280px) {
   .Home .home-info .left h1 {
     font-size: 4em;
