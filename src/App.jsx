@@ -45,7 +45,6 @@ function App() {
 
           <a href="#home" className="logo">
             <span className="logo-icon">ᖴᗩ</span>
-            <span className="logo-name">Febie.</span>
           </a>
 
           <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
