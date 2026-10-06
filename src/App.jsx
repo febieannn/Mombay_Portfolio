@@ -57,7 +57,7 @@ function App() {
             </a>
 
             <a href="#tools" onClick={() => setMenuOpen(false)}>
-              Tools
+              Tools & Technologies
             </a>
 
             <a href="#projects" onClick={() => setMenuOpen(false)}>
