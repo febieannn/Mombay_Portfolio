@@ -651,7 +651,10 @@ img {
 }
 
 .dark-card p {
-  color: #b7b1a8;
+  color: #77736b;
+  line-height: 1.7;
+  font-size: 14px;
+  max-width: 470px;
 }
 
 .round-arrow {
