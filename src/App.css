@@ -51,7 +51,7 @@ img {
   min-height: 62px;
   padding: 0 10px 0 20px;
   border-radius: 50px;
-  background: #f3f1f1;
+  background: #f5f3e8;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -454,7 +454,7 @@ img {
 .moving-text {
   width: 100%;
   overflow: hidden;
-  background: #eae7e4;
+  background: #f5f3e8;
   color: #090909;
   border-top: 4px solid #ffa51a;
   border-bottom: 4px solid #ffa51a;
@@ -620,13 +620,14 @@ img {
 }
 
 .dark-card {
-  background: #ffffff;
+  background: #fff;
   color: #080808;
 }
 
 .white-card {
   background: #fff;
   border: 1px solid rgba(23, 16, 9, 0.08);
+  color: #080808;
 }
 
 .about-card .number {
