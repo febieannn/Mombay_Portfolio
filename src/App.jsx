@@ -1,12 +1,9 @@
-import { useState, useEffect } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [progress, setProgress] = useState(0);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,11 +25,11 @@ function App() {
       formData.email.trim() === "" ||
       formData.message.trim() === ""
     ) {
-      alert("⚠️ Please fill in all fields!");
+      alert("Please fill in all fields!");
       return;
     }
 
-    alert("✅ Message Sent!");
+    alert("Message Sent!");
 
     setFormData({
       name: "",
@@ -41,123 +38,277 @@ function App() {
     });
   };
 
-
-  // Simulate loading for the circular loader
-  useEffect(() => {
-    let interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval);
-          setLoading(false);
-          return 100;
-        }
-        return prev + 1;
-      });
-    }, 30); // ~3 seconds to reach 100%
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <>
-      {/* LOADER */}
-      {loading && (
-        <div className="loader-wrapper">
-          <div className="circle-loader">
-            <svg>
-              <circle cx="50" cy="50" r="45"></circle>
-              <circle
-                cx="50"
-                cy="50"
-                r="45"
-                style={{ strokeDashoffset: 283 - (283 * progress) / 100 }}
-              ></circle>
-            </svg>
-            <div className="progress-text">{progress}%</div>
-          </div>
+    <div className="portfolio">
+      <header className="navbar">
+        <div className="container nav-container">
+
+          <a href="#home" className="logo">
+            <span className="logo-icon">ᖴᗩ</span>
+            <span className="logo-name">Febie.</span>
+          </a>
+
+          <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
+            <a href="#home" onClick={() => setMenuOpen(false)}>
+              Home
+            </a>
+
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+
+            <a href="#tools" onClick={() => setMenuOpen(false)}>
+              Tools
+            </a>
+
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </nav>
+
+          <a href="#contact" className="nav-talk">
+            Let's Talk
+          </a>
+
+          <button
+            className="menu-toggle"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle navigation"
+            type="button"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
         </div>
-      )}
+      </header>
 
-      {/* PORTFOLIO CONTENT */}
-      <div className={`portfolio ${!loading ? "show" : ""}`}>
-        {/* NAVBAR */}
-        <header className="navbar">
-          <div className="container nav-container">
-            <div className="logo">
-              <span className="logo-icon">ᖴᗩ</span>
-            </div>
+      <main>
 
-            <nav className={`nav-menu ${menuOpen ? "active" : ""}`}>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#tools">Tools</a>
-              <a href="#contact">Contact</a>
-            </nav>
-
-            <div
-              className="menu-toggle"
-              onClick={() => setMenuOpen(!menuOpen)}
-            >
-              ☰
-            </div>
-          </div>
-        </header>
-
-        {/* HERO */}
         <section id="home" className="hero">
-          <div className="container hero-grid">
-            <div className="hero-text">
-              <span className="badge">Hello There!</span>
-              <h1>
-                I'm <span className="text-ochre">Febie Ann</span>,<br />
-                Graphic Designer and UX Writer.
-              </h1>
-              <p>
-                A Graphic Designer and UX Writer who crafts visually striking
-                designs and words seamlessly.
-              </p>
-              <div className="btn-group">
-                <a href="#projects" className="btn-dark">
-                  View My Projects
-                </a>
-              </div>
-            </div>
-
-            <div className="hero-image">
-              <div className="image-wrapper">
-                <img src="/febie.jpg" alt="Febie" className="profile-img" />
-                <div className="dot-pattern"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ABOUT */}
-        <section id="about" className="section bg-light">
           <div className="container">
-            <p className="tag">— About</p>
-            <div className="services-grid">
-              <div className="card">
-                <h3>Who I am</h3>
+
+            <div className="hero-top">
+              <div className="hero-badge">
+                Backend Developer & UI/UX Designer
+              </div>
+            </div>
+
+            <div className="hero-title-area">
+              <h1>
+                I'm <span>Febie Ann</span>
+                <br />
+                Backend Developer
+                <br />
+                <em>& UX Writer.</em>
+              </h1>
+
+              <div className="hero-sticker">
+                <span>✦</span>
+                <strong>CREATIVE</strong>
+                <small>DESIGNER</small>
+                <span>→</span>
+              </div>
+            </div>
+
+            <div className="hero-description">
+              <p>
+                A Backend Developer and UI/UX Designer who crafts visually
+                striking designs and words seamlessly.
+              </p>
+            </div>
+
+            <div className="hero-main">
+
+              <div className="hero-social">
+
+                <div className="hero-rating">
+                  <strong>3+</strong>
+                  <span>Projects</span>
+                  <small>
+                    Creative works & digital experiences
+                  </small>
+                </div>
+              </div>
+
+              <div className="hero-image">
+
+                <div className="hero-shape shape-one"></div>
+
+                <div className="image-wrapper">
+                  <img
+                    src="/febie.jpg"
+                    alt="Febie Ann"
+                    className="profile-img"
+                  />
+                </div>
+
+                <div className="hero-floating-card card-left">
+                  <span>✦</span>
+                  UI/UX Design
+                </div>
+
+                <div className="hero-floating-card card-right">
+                  <span>✦</span>
+                  Backend Developer
+                </div>
+
+              </div>
+
+              <div className="hero-quote">
+                <span className="quote-mark">“</span>
+
                 <p>
-                  I am an IT student passionate about graphic design and UX
-                  writing. I create visually appealing and user-friendly digital
-                  experiences.
+                  Designing experiences that are simple,
+                  creative, and meaningful.
                 </p>
               </div>
-              <div className="card">
-                <h3>Education</h3>
-                <p>Bachelor of Science in Information Technology (BSIT)</p>
-              </div>
+
             </div>
+
+            <div className="hero-buttons">
+              <a href="#projects" className="btn-primary">
+                View My Projects
+                <span>→</span>
+              </a>
+
+              <a href="#contact" className="btn-secondary">
+                Hire Me
+                <span>↗</span>
+              </a>
+            </div>
+
           </div>
         </section>
 
-        {/* TOOLS */}
+        <div className="moving-text">
+          <div className="moving-track">
+            <span>BACKEND DEVELOPER</span>
+            <b>✦</b>
+            <span>UI/UX DESIGN</span>
+            <b>✦</b>
+            <span>BACKEND DEVELOPER</span>
+            <b>✦</b>
+            <span>UI/UX DESIGN</span>
+            <b>✦</b>
+            <span>BACKEND DEVELOPER</span>
+            <b>✦</b>
+            <span>UI/UX DESIGN</span>
+            <b>✦</b>
+            <span>BACKEND DEVELOPER</span>
+          </div>
+        </div>
+
+        <section id="about" className="section about-section">
+          <div className="container">
+
+            <div className="section-heading">
+
+              <div>
+                <p className="tag">
+                  <span></span>
+                  About Me
+                </p>
+
+                <h2>
+                  Who <span>Am I?</span>
+                </h2>
+              </div>
+
+              <p className="heading-description">
+                A creative IT student passionate about combining
+                design, technology, and meaningful user experiences.
+              </p>
+
+            </div>
+
+            <div className="about-grid">
+
+              <div className="about-image-card">
+                <div className="about-decoration"></div>
+
+                <img
+                  src="/febie.jpg"
+                  alt="Febie Ann"
+                />
+
+                <div className="about-image-label">
+                  <strong>Febie Ann</strong>
+                  <span>Designer & UX Writer</span>
+                </div>
+              </div>
+
+              <div className="about-content">
+
+                <div className="about-card dark-card">
+                  <div className="number">01</div>
+
+                  <div>
+                    <h3>About Me</h3>
+
+                    <p>
+                      I am an IT student passionate about graphic design
+                      and UX writing. I create visually appealing and
+                      user-friendly digital experiences.
+                    </p>
+                  </div>
+
+                  <span className="round-arrow">↗</span>
+                </div>
+
+                <div className="about-card white-card">
+                  <div className="number">02</div>
+
+                  <div>
+                    <h3>Education</h3>
+
+                    <p>
+                      Bachelor of Science in Information Technology
+                      (BSIT)
+                    </p>
+                  </div>
+
+                  <span className="round-arrow orange-arrow">↗</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
         <section id="tools" className="tools">
           <div className="container">
-            <p className="tag">— Tools</p>
+
+            <div className="section-heading tools-heading">
+
+              <div>
+                <p className="tag">
+                  <span></span>
+                  My Tools
+                </p>
+
+                <h2>
+                  Tools I <span>Work With.</span>
+                </h2>
+              </div>
+
+              <p className="heading-description">
+                The tools I use to turn ideas into practical,
+                creative, and engaging digital experiences.
+              </p>
+
+            </div>
+
             <div className="marquee-container">
               <div className="scroll-track">
+
                 {[
                   "htmllogo.webp",
                   "css.png",
@@ -171,161 +322,222 @@ function App() {
                   "github.webp",
                 ].map((src, i) => (
                   <div className="tool-box" key={i}>
-                    <img src={`/${src}`} alt={src.split(".")[0]} />
+                    <img
+                      src={`/${src}`}
+                      alt={src.split(".")[0]}
+                    />
                   </div>
                 ))}
+
               </div>
             </div>
+
           </div>
         </section>
 
-        {/* PROJECTS */}
-        <section id="projects" className="section bg-light">
+        <section id="projects" className="section projects-section">
           <div className="container">
-            <h2>My Projects</h2>
+
+            <div className="section-heading">
+
+              <div>
+                <p className="tag">
+                  <span></span>
+                  My Projects
+                </p>
+
+                <h2>
+                  Selected <span>Works.</span>
+                </h2>
+              </div>
+
+              <a href="#contact" className="view-all">
+                Let's Work Together
+                <span>→</span>
+              </a>
+
+            </div>
+
             <div className="project-grid">
+
               {[
                 {
                   img: "/music.png",
                   title: "Music App Design",
                   desc: "UI/UX design in Figma",
-                  link: "https://www.figma.com/design/F2hWu15yewv8IC4B4x253u/Untitled",
+                  category: "UI / UX DESIGN",
+                  link:
+                    "https://www.figma.com/design/F2hWu15yewv8IC4B4x253u/Untitled",
                 },
                 {
                   img: "/cam.png",
                   title: "Camera App Design",
                   desc: "UI/UX design in Figma",
-                  link: "https://www.figma.com/design/ZzujWCNgCzzCi2k5g53oog/Challenge-1",
+                  category: "APP DESIGN",
+                  link:
+                    "https://www.figma.com/design/ZzujWCNgCzzCi2k5g53oog/Challenge-1",
                 },
                 {
                   img: "/proj.png",
                   title: "TradeTime Project",
                   desc: "Prototype design",
-                  link: "https://www.figma.com/proto/6f84eTidHmfcYpnED6RjkJ",
+                  category: "PROTOTYPE",
+                  link:
+                    "https://www.figma.com/proto/6f84eTidHmfcYpnED6RjkJ",
                 },
               ].map((proj, i) => (
                 <div className="project-card" key={i}>
-                  <img src={proj.img} alt={proj.title} />
-                  <div className="overlay">
+
+                  <div className="project-image">
+
+                    <img
+                      src={proj.img}
+                      alt={proj.title}
+                    />
+
+                    <div className="project-number">
+                      0{i + 1}
+                    </div>
+
+                    <div className="project-overlay">
+                      <a
+                        href={proj.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        View Project ↗
+                      </a>
+                    </div>
+
+                  </div>
+
+                  <div className="project-info">
+                    <span>{proj.category}</span>
                     <h3>{proj.title}</h3>
                     <p>{proj.desc}</p>
-                    <a href={proj.link} target="_blank" rel="noreferrer">
-                      View Here
-                    </a>
                   </div>
+
                 </div>
               ))}
+
             </div>
+
           </div>
         </section>
 
-        {/* FOOTER */}
         <footer id="contact" className="footer">
-           <div className="contact-section">
-      <h1 className="contact-title">
-        Contact <span>Me</span>
-      </h1>
 
-      <form className="contact-card" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Full Name"
-          className="contact-input"
-          value={formData.name}
-          onChange={handleChange}
-        />
+          <div className="contact-section">
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          className="contact-input"
-          value={formData.email}
-          onChange={handleChange}
-        />
+            <div className="container contact-container">
 
-        <textarea
-          name="message"
-          placeholder="Message"
-          className="contact-textarea"
-          value={formData.message}
-          onChange={handleChange}
-        ></textarea>
+              <div className="contact-intro">
 
-        <button type="submit" className="contact-btn">
-          Send Message
-        </button>
-      </form>
-    </div>
+                <p className="tag">
+                  <span></span>
+                  Contact Me
+                </p>
+
+                <h2>
+                  Let's Bring Your
+                  <span> Ideas to Life.</span>
+                </h2>
+
+                <p className="contact-description">
+                  Have a project in mind? Let's create something
+                  meaningful, useful, and visually engaging together.
+                </p>
+
+                <div className="contact-details">
+
+                  <div>
+                    <span>Email</span>
+                    <strong>
+                      mombayfebieann@gmail.com
+                    </strong>
+                  </div>
+
+                  <div>
+                    <span>Role</span>
+                    <strong>
+                      Backend Developer & UI/UX Designer
+                    </strong>
+                  </div>
+
+                </div>
+
+              </div>
+
+              <form
+                className="contact-card"
+                onSubmit={handleSubmit}
+              >
+
+                <div className="form-heading">
+                  <span>Let's Talk</span>
+                  <span>✦</span>
+                </div>
+
+                <label>Full Name</label>
+
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your full name"
+                  className="contact-input"
+                  value={formData.name}
+                  onChange={handleChange}
+                />
+
+                <label>Email</label>
+
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Your email address"
+                  className="contact-input"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+
+                <label>Message</label>
+
+                <textarea
+                  name="message"
+                  placeholder="Tell me about your project..."
+                  className="contact-textarea"
+                  value={formData.message}
+                  onChange={handleChange}
+                ></textarea>
+
+                <button
+                  type="submit"
+                  className="contact-btn"
+                >
+                  Send Message
+                  <span>→</span>
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+          <div className="footer-bottom">
+            <p>
+              © 2026 Febie Ann Mombay | UI/UX Designer | Backend Developer
+            </p>
+
+            <a href="#home">
+              Back to top ↑
+            </a>
+          </div>
+
         </footer>
 
-        {/* NEXT STEPS / SOCIAL */}
-        <section id="next-steps">
-          <div id="documentation">
-            <svg className="icon" role="presentation" aria-hidden="true">
-              <use href="/icons.svg#documentation-icon"></use>
-            </svg>
-            <h2>Documentation</h2>
-            <p>Your questions, answered</p>
-            <ul>
-              <li>
-                <a href="https://vite.dev/" target="_blank" rel="noreferrer">
-                  <img className="logo" src={viteLogo} alt="" />
-                  Explore Vite
-                </a>
-              </li>
-              <li>
-                <a href="https://react.dev/" target="_blank" rel="noreferrer">
-                  <img className="button-icon" src={reactLogo} alt="" />
-                  Learn more
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div id="social">
-            <svg className="icon" role="presentation" aria-hidden="true">
-              <use href="/icons.svg#social-icon"></use>
-            </svg>
-            <h2>Connect with us</h2>
-            <p>Join the Vite community</p>
-            <ul>
-              <li>
-                <a href="https://github.com/vitejs/vite" target="_blank" rel="noreferrer">
-                  <svg className="button-icon" role="presentation" aria-hidden="true">
-                    <use href="/icons.svg#github-icon"></use>
-                  </svg>
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://chat.vite.dev/" target="_blank" rel="noreferrer">
-                  <svg className="button-icon" role="presentation" aria-hidden="true">
-                    <use href="/icons.svg#discord-icon"></use>
-                  </svg>
-                  Discord
-                </a>
-              </li>
-              <li>
-                <a href="https://x.com/vite_js" target="_blank" rel="noreferrer">
-                  <svg className="button-icon" role="presentation" aria-hidden="true">
-                    <use href="/icons.svg#x-icon"></use>
-                  </svg>
-                  X.com
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <footer className="footer">
-  <p>
-    © 2026 Febie Ann Mombay | UX Designer | Graphic Designer
-  </p>
-</footer>
-      </div>
-    </>
+      </main>
+    </div>
   );
 }
-
-export default App;    
+export default App
