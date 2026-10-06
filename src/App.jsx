@@ -238,7 +238,7 @@ function App() {
 
                 <div className="about-image-label">
                   <strong>Febie Ann</strong>
-                  <span>Designer & UX Writer</span>
+                  <span>Backend Developer & UI/UX Design</span>
                 </div>
               </div>
 
@@ -251,7 +251,7 @@ function App() {
                     <h3>About Me</h3>
 
                     <p>
-                      I am an IT student passionate about graphic design
+                      An IT student passionate about graphic design
                       and UX writing. I create visually appealing and
                       user-friendly digital experiences.
                     </p>
@@ -290,16 +290,16 @@ function App() {
               <div>
                 <p className="tag">
                   <span></span>
-                  My Tools
+                  My Tools & Technologies
                 </p>
 
                 <h2>
-                  Tools I <span>Work With.</span>
+                  Tools I<span>Tecnologies.</span>
                 </h2>
               </div>
 
               <p className="heading-description">
-                The tools I use to turn ideas into practical,
+                The tools & technologies I use to turn ideas into practical,
                 creative, and engaging digital experiences.
               </p>
 
@@ -314,11 +314,15 @@ function App() {
                   "figma.webp",
                   "mysql.png",
                   "github.webp",
+                  "vercel-logo.webp",
+                  "clickup.png",
                   "htmllogo.webp",
                   "css.png",
                   "figma.webp",
                   "mysql.png",
                   "github.webp",
+                  "vercel-logo.webp",
+                  "clickup.png",
                 ].map((src, i) => (
                   <div className="tool-box" key={i}>
                     <img
@@ -376,13 +380,23 @@ function App() {
                   link:
                     "https://www.figma.com/design/ZzujWCNgCzzCi2k5g53oog/Challenge-1",
                 },
+                
                 {
                   img: "/proj.png",
                   title: "TradeTime Project",
                   desc: "Prototype design",
                   category: "PROTOTYPE",
                   link:
-                    "https://www.figma.com/proto/6f84eTidHmfcYpnED6RjkJ",
+                    "https://www.figma.com/design/6f84eTidHmfcYpnED6RjkJ",
+                },
+
+                 {
+                  img: "/aktiv.png",
+                  title: "Aktiv Project",
+                  desc: "Prototype design",
+                  category: "PROTOTYPE",
+                  link:
+                    "https://www.figma.com/design/hMfDB1h6Ysy7SvKqtuIG9m",
                 },
               ].map((proj, i) => (
                 <div className="project-card" key={i}>
