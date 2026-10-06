@@ -236,38 +236,6 @@ img {
   font-style: normal;
 }
 
-.hero-sticker {
-  position: absolute;
-  right: 7%;
-  top: 10px;
-  width: 105px;
-  height: 105px;
-  border-radius: 50%;
-  background: #171009;
-  color: #ffa51a;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(10deg);
-  box-shadow: 5px 8px 0 #ffa51a;
-}
-
-.hero-sticker strong {
-  font-size: 10px;
-  letter-spacing: 1px;
-}
-
-.hero-sticker small {
-  font-size: 7px;
-  color: #fff;
-  margin: 3px 0;
-}
-
-.hero-sticker span {
-  font-size: 13px;
-}
-
 .hero-description {
   max-width: 470px;
   margin: 20px auto 0;
@@ -372,25 +340,6 @@ img {
   top: 70px;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.hero-floating-card {
-  position: absolute;
-  z-index: 6;
-  padding: 10px 15px;
-  background: #fff;
-  border: 1px solid rgba(23, 16, 9, 0.12);
-  border-radius: 30px;
-  box-shadow: 0 10px 25px rgba(23, 16, 9, 0.09);
-  font-size: 11px;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.hero-floating-card span {
-  color: #ffa51a;
 }
 
 .card-left {

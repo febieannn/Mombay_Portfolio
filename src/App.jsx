@@ -104,15 +104,8 @@ function App() {
                 <br />
                 Backend Developer
                 <br />
-                <em>& UX Writer.</em>
+                <em>UI/UX Designer</em>
               </h1>
-
-              <div className="hero-sticker">
-                <span>✦</span>
-                <strong>CREATIVE</strong>
-                <small>DESIGNER</small>
-                <span>→</span>
-              </div>
             </div>
 
             <div className="hero-description">
@@ -145,16 +138,6 @@ function App() {
                     alt="Febie Ann"
                     className="profile-img"
                   />
-                </div>
-
-                <div className="hero-floating-card card-left">
-                  <span>✦</span>
-                  UI/UX Design
-                </div>
-
-                <div className="hero-floating-card card-right">
-                  <span>✦</span>
-                  Backend Developer
                 </div>
 
               </div>
@@ -200,6 +183,11 @@ function App() {
             <span>UI/UX DESIGN</span>
             <b>✦</b>
             <span>BACKEND DEVELOPER</span>
+             <b>✦</b>
+            <span>BACKEND DEVELOPER</span>
+            <b>✦</b>
+            <span>UI/UX DESIGN</span>
+            <b>✦</b>
           </div>
         </div>
 
