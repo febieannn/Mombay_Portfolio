@@ -179,7 +179,7 @@ function App() {
 
               <a href="#contact" className="btn-secondary">
                 Hire Me
-                <span>↗</span>
+                <span>→</span>
               </a>
             </div>
 
@@ -258,7 +258,7 @@ function App() {
                     </p>
                   </div>
 
-                  <span className="round-arrow">↗</span>
+                  <span className="round-arrow">→</span>
                 </div>
 
                 <div className="about-card white-card">
@@ -273,7 +273,7 @@ function App() {
                     </p>
                   </div>
 
-                  <span className="round-arrow orange-arrow">↗</span>
+                  <span className="round-arrow orange-arrow">→</span>
                 </div>
 
               </div>
@@ -515,7 +515,6 @@ function App() {
                   className="contact-btn"
                 >
                   Send Message
-                  <span>→</span>
                 </button>
 
               </form>
