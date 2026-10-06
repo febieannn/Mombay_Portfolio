@@ -234,9 +234,8 @@ function App() {
                     <h3>About Me</h3>
 
                     <p>
-                      An IT student passionate about graphic design
-                      and UX writing. I create visually appealing and
-                      user-friendly digital experiences.
+                     An IT student passionate about UI/UX Design and Backend Development, 
+                     dedicated to creating visually appealing and user-friendly digital experiences.
                     </p>
                   </div>
 
