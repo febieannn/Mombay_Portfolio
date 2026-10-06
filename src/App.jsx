@@ -223,11 +223,6 @@ function App() {
                   src="/febie.jpg"
                   alt="Febie Ann"
                 />
-
-                <div className="about-image-label">
-                  <strong>Febie Ann</strong>
-                  <span>Backend Developer & UI/UX Design</span>
-                </div>
               </div>
 
               <div className="about-content">

@@ -51,11 +51,11 @@ img {
   min-height: 62px;
   padding: 0 10px 0 20px;
   border-radius: 50px;
-  background: #171009;
+  background: #f3f1f1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: #fff;
+  color: #000000;
   box-shadow: 0 10px 30px rgba(23, 16, 9, 0.12);
 }
 
@@ -97,7 +97,7 @@ img {
   position: relative;
   font-size: 12px;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(10, 10, 10, 0.78);
   transition: 0.3s ease;
 }
 
@@ -454,8 +454,8 @@ img {
 .moving-text {
   width: 100%;
   overflow: hidden;
-  background: #171009;
-  color: #fff;
+  background: #eae7e4;
+  color: #090909;
   border-top: 4px solid #ffa51a;
   border-bottom: 4px solid #ffa51a;
   padding: 16px 0;
@@ -602,29 +602,6 @@ img {
   filter: saturate(0.9);
 }
 
-.about-image-label {
-  position: absolute;
-  left: 25px;
-  bottom: 25px;
-  z-index: 5;
-  background: #171009;
-  color: #fff;
-  padding: 12px 17px;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-image-label strong {
-  font-size: 14px;
-}
-
-.about-image-label span {
-  font-size: 10px;
-  color: #aaa49b;
-  margin-top: 3px;
-}
-
 .about-content {
   display: flex;
   flex-direction: column;
@@ -643,8 +620,8 @@ img {
 }
 
 .dark-card {
-  background: #171009;
-  color: #fff;
+  background: #ffffff;
+  color: #080808;
 }
 
 .white-card {
